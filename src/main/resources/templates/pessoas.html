@@ -7,8 +7,6 @@
 	<h3>Lista de Pessoas:</h3>
 	<div th:each="pessoa : ${pessoas} ">
 		<a th:href="@{/detalhes/{id}(id=${pessoa.id}) }"><p th:text="${pessoa.nome}"></p></a>
-		<p th:text="${pessoa.numeroTelefone}"></p>
-		<p th:text="${pessoa.idade}"></p>
 	</div>
 </body>
 </html>

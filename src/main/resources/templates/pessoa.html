@@ -3,9 +3,9 @@
 
 </head>
 <body>
-	O nome: <p th:text="${pessoa.nome}"></p>
-	O telefone: <p th:text="${pessoa.numeroTelefone}"></p>
-	A idade: <p th:text="${pessoa.idade}"></p>
-	Os detalhes: <p th:text="${pessoa.detalhes}"></p>
+	<p th:text="${'Nome: '+pessoa.nome}"></p>
+	<p th:text="${'Telefone: '+pessoa.numeroTelefone}"></p>
+	<p th:text="${'Idade: '+pessoa.idade}"></p>
+	<p th:text="${'Detalhes: '+pessoa.detalhes}"></p>
 </body>
 </html>

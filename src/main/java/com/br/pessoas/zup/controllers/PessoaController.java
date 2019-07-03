@@ -30,12 +30,18 @@ public class PessoaController {
 		return modelAndView;
 	}
 	
+//	@PostMapping("/cadastro")
+//	public String salvarPessoa(PessoaModel pessoa) {
+//		pessoService.salvarPessoa(pessoa);
+//		return "redirect:/";
+//	}
 	@PostMapping("/cadastro")
-	public String salvarPessoa(PessoaModel pessoa) {
-		pessoService.salvarPessoa(pessoa);
+	public String salvarPessoa(String nome,String numeroTelefone, int idade, String detalhes){
+		pessoService.salvarPessoa(nome, numeroTelefone, idade, detalhes);
 		return "redirect:/";
 	}
 	
+
 	@GetMapping("/detalhes/{id}")
 	public ModelAndView buscarPessoa(@PathVariable int id) {
 		ModelAndView modelAndView = new ModelAndView("pessoa.html");
